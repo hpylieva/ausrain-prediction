@@ -62,12 +62,12 @@ with col1:
     sunshine = st.slider('Сонячне світло (години)', float(data['Sunshine'].min()), float(data['Sunshine'].max()), 7.0)
     wind_gust_dir = st.selectbox('Напрям вітру при поривах', wind_gust_dirs)
     wind_gust_speed = st.slider('Швидкість пориву вітру (км/год)', float(data['WindGustSpeed'].min()), float(data['WindGustSpeed'].max()), 50.0)
-
-with col2:
     wind_dir_9am = st.selectbox('Напрям вітру о 9:00', wind_dirs_9am)
     wind_dir_3pm = st.selectbox('Напрям вітру о 15:00', wind_dirs_3pm)
     wind_speed_9am = st.slider('Швидкість вітру о 9:00 (км/год)', float(data['WindSpeed9am'].min()), float(data['WindSpeed9am'].max()), 15.0)
     wind_speed_3pm = st.slider('Швидкість вітру о 15:00 (км/год)', float(data['WindSpeed3pm'].min()), float(data['WindSpeed3pm'].max()), 20.0)
+
+with col2:
     humidity_9am = st.slider('Вологість о 9:00 (%)', float(data['Humidity9am'].min()), float(data['Humidity9am'].max()), 80.0)
     humidity_3pm = st.slider('Вологість о 15:00 (%)', float(data['Humidity3pm'].min()), float(data['Humidity3pm'].max()), 50.0)
     pressure_9am = st.slider('Тиск о 9:00 (гПа)', float(data['Pressure9am'].min()), float(data['Pressure9am'].max()), 1010.0)
